@@ -9,5 +9,6 @@ data class WelcomeUiState(
     val userData: StateFlow<User?>,
     val userName: StateFlow<String?>,
     val isAGuest: StateFlow<Boolean> = MutableStateFlow(false),
-    val mutateUserName: (String?) -> Unit
+    val mutateUserName: (String?) -> Unit,
+    val navigateToHome: () -> Unit
 )

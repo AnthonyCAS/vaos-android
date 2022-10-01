@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.ChevronLeft
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.ExpandMore
 import androidx.compose.material3.Scaffold
@@ -89,9 +88,9 @@ fun WelcomeScreenContent(
                     )
                     .fillMaxWidth()
             )
-            val userName = userName.orEmpty()
+            val safeUserName = userName.orEmpty()
             InputField(
-                text = userName.orEmpty(),
+                text = safeUserName,
                 modifier = Modifier
                     .padding(
                         horizontal = AppTheme.dimens.spacingSmall
@@ -104,7 +103,7 @@ fun WelcomeScreenContent(
                         text = "My name",
                         style = AppTheme.typography.bodySRegular,
                         modifier = Modifier
-                            .applyIf(userName.isNotEmpty()) {
+                            .applyIf(safeUserName.isNotEmpty()) {
                                 padding(
                                     top = spacingXSmall
                                 )
@@ -112,7 +111,7 @@ fun WelcomeScreenContent(
                     )
                 },
                 trailIcon = {
-                    if (userName.isNotBlank()) {
+                    if (safeUserName.isNotBlank()) {
                         DefaultIconButton(
                             imageVector = Icons.Outlined.Close,
                             tintColor = AppTheme.colors.colorGray4,
@@ -156,8 +155,8 @@ fun WelcomeScreenContent(
             )
             PrimaryButton(
                 text = "Let’s go!",
-                enabled = !userName.isNullOrBlank(),
-                onClick = { /*TODO*/ },
+                enabled = !safeUserName.isNullOrBlank(),
+                onClick = state.navigateToHome,
                 modifier = Modifier
                     .padding(
                         all = AppTheme.dimens.spacingSmall
@@ -181,7 +180,8 @@ fun StarterScreenPreview() {
         isAGuest = isAGuest,
         userData = userData,
         userName = MutableStateFlow(""),
-        mutateUserName = {}
+        mutateUserName = {},
+        navigateToHome = {}
     )
 
     AppTheme {
