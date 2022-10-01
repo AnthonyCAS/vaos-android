@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">vaos</string>
+    <string name="notifications_channel_name" translatable="false">Vaos</string>
+    <string name="notifications_channel_description" translatable="false">Vaos Channel</string>
+    <string name="system_default" translatable="false">System Default</string>
+    <string name="light" translatable="false">Light</string>
+    <string name="dark" translatable="false">Dark</string>
+
+    <string name="search">Search</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+
+</resources>
