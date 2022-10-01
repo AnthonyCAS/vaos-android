@@ -102,15 +102,15 @@ fun InputField(
         cursorColor = AppTheme.colors.colorGray7,
         errorCursorColor = AppTheme.colors.colorGray7,
         errorLabelColor = AppTheme.colors.colorError4,
-        unfocusedLabelColor = AppTheme.colors.colorGray3,
-        focusedLabelColor = AppTheme.colors.colorGray3,
-        disabledLabelColor = AppTheme.colors.colorGray3,
+        unfocusedLabelColor = AppTheme.colors.colorGray4,
+        focusedLabelColor = AppTheme.colors.colorGray4,
+        disabledLabelColor = AppTheme.colors.colorGray4,
         focusedIndicatorColor = Color.Transparent,
         unfocusedIndicatorColor = Color.Transparent,
         disabledIndicatorColor = Color.Transparent,
         errorIndicatorColor = Color.Transparent,
         placeholderColor = AppTheme.colors.colorGray4,
-        disabledPlaceholderColor = AppTheme.colors.colorGray3
+        disabledPlaceholderColor = AppTheme.colors.colorGray4
     )
 
     Column(

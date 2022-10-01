@@ -1,11 +1,11 @@
 package com.android.vaos.ux.main
 
 import androidx.lifecycle.viewModelScope
+import com.android.vaos.ui.theme.DisplayThemeType
 import com.android.vaos.util.navigation.ViewModelNav
 import com.android.vaos.util.navigation.ViewModelNavImpl
-import com.android.vaos.ui.theme.DisplayThemeType
 import com.android.vaos.ux.BaseViewModel
-import com.android.vaos.ux.home.HomeRoute
+import com.android.vaos.ux.starter.StarterRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,7 +19,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor() : BaseViewModel<Unit>(), ViewModelNav by ViewModelNavImpl() {
 
     private val startDestination: MutableStateFlow<String> = MutableStateFlow(
-        HomeRoute.routeDefinition
+        StarterRoute.routeDefinition
     )
 
     private val loadingSplash = MutableStateFlow(true)

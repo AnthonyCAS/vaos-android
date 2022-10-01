@@ -169,8 +169,8 @@ fun AppTheme(
     val colorPalette = remember { colors }
 
     systemUiController.setSystemBarsColor(
-        color = Color.Transparent,
-        darkIcons = !darkTheme
+        color = Color.White,
+        darkIcons = true
     )
     CompositionLocalProvider(
         LocalAppColors provides colorPalette,

@@ -45,9 +45,9 @@ fun SecondaryButton(
     )
 ) {
     val buttonColor = if (enabled) {
-        AppTheme.colors.colorPrimary4
+        AppTheme.colors.colorGray3
     } else {
-        AppTheme.colors.colorPrimary3
+        AppTheme.colors.colorGray3
     }
     OutlinedButton(
         onClick = onClick,
